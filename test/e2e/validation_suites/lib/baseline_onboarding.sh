@@ -15,15 +15,19 @@ baseline_onboarding_load_context() {
 }
 
 baseline_assert_nemoclaw_on_path() {
-  command -v nemoclaw >/dev/null 2>&1 \
-    && baseline_onboarding_pass validation.baseline_onboarding.nemoclaw_on_path "nemoclaw found" \
-    || baseline_onboarding_fail validation.baseline_onboarding.nemoclaw_on_path "nemoclaw not on PATH"
+  if command -v nemoclaw >/dev/null 2>&1; then
+    baseline_onboarding_pass validation.baseline_onboarding.nemoclaw_on_path "nemoclaw found"
+  else
+    baseline_onboarding_fail validation.baseline_onboarding.nemoclaw_on_path "nemoclaw not on PATH"
+  fi
 }
 
 baseline_assert_openshell_on_path() {
-  command -v openshell >/dev/null 2>&1 \
-    && baseline_onboarding_pass validation.baseline_onboarding.openshell_on_path "openshell found" \
-    || baseline_onboarding_fail validation.baseline_onboarding.openshell_on_path "openshell not on PATH"
+  if command -v openshell >/dev/null 2>&1; then
+    baseline_onboarding_pass validation.baseline_onboarding.openshell_on_path "openshell found"
+  else
+    baseline_onboarding_fail validation.baseline_onboarding.openshell_on_path "openshell not on PATH"
+  fi
 }
 
 baseline_assert_nemoclaw_help_exits_zero() {
@@ -64,7 +68,9 @@ baseline_assert_logs_produce_output() {
 
 baseline_assert_inference_route_provider() {
   local expected="${1:-$E2E_PROVIDER}"
-  [[ "${E2E_PROVIDER:-}" == "$expected" ]] \
-    && baseline_onboarding_pass validation.baseline_onboarding.inference_route_provider "provider=$expected route=${E2E_INFERENCE_ROUTE:-}" \
-    || baseline_onboarding_fail validation.baseline_onboarding.inference_route_provider "provider mismatch"
+  if [[ "${E2E_PROVIDER:-}" == "$expected" ]]; then
+    baseline_onboarding_pass validation.baseline_onboarding.inference_route_provider "provider=$expected route=${E2E_INFERENCE_ROUTE:-}"
+  else
+    baseline_onboarding_fail validation.baseline_onboarding.inference_route_provider "provider mismatch"
+  fi
 }
