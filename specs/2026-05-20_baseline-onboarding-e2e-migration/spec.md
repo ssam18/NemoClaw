@@ -464,4 +464,4 @@ Remove migration leftovers and update contributor-facing documentation.
 ## Open Questions
 
 1. Which diagnostic assertions from `test-onboard-inference-smoke.sh` are stable enough to map now versus defer?
-2. Should Brev launchable run the full baseline suite or only a launchable-compatible subset?
+2. Should Brev launchable run the full baseline suite or only a launchable-compatible subset? [COMPLETED: c436ab97c]
