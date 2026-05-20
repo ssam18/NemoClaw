@@ -26,7 +26,7 @@ Validation is complete only when both criteria are satisfied:
 
 ## Phase 1: Legacy Assertion Inventory and Classification - Validation Scenarios
 
-### Scenario 1.1: Scoped Legacy Assertions Are Fully Classified [STATUS: pending]
+### Scenario 1.1: Scoped Legacy Assertions Are Fully Classified [STATUS: passed] [VALIDATED: cef7748]
 **Type**: Happy Path
 
 **Given**: The four scoped legacy scripts exist and the parity inventory can be generated.
@@ -40,7 +40,7 @@ Validation is complete only when both criteria are satisfied:
 
 **Tools Required**: Bash, `npx tsx`.
 
-### Scenario 1.2: Unknown or Unclassified Scoped Assertions Fail Validation [STATUS: pending]
+### Scenario 1.2: Unknown or Unclassified Scoped Assertions Fail Validation [STATUS: passed] [VALIDATED: cef7748]
 **Type**: Sad Path
 
 **Given**: A scoped legacy assertion is missing from the parity map.
@@ -56,7 +56,7 @@ Validation is complete only when both criteria are satisfied:
 
 ## Phase 2: Baseline Onboarding Primitive Library - Validation Scenarios
 
-### Scenario 2.1: Helper Library Emits Stable PASS IDs With Mocked Context [STATUS: pending]
+### Scenario 2.1: Helper Library Emits Stable PASS IDs With Mocked Context [STATUS: passed] [VALIDATED: cef7748]
 **Type**: Happy Path
 
 **Given**: A prepared `E2E_CONTEXT_DIR/context.env` and mocked `nemoclaw`/`openshell` binaries.
@@ -70,7 +70,7 @@ Validation is complete only when both criteria are satisfied:
 
 **Tools Required**: Vitest, Bash.
 
-### Scenario 2.2: Helper Failure Redacts Secrets and Emits Stable FAIL ID [STATUS: pending]
+### Scenario 2.2: Helper Failure Redacts Secrets and Emits Stable FAIL ID [STATUS: passed] [VALIDATED: cef7748]
 **Type**: Sad Path
 
 **Given**: Context includes token-like values and a mocked command fails.
@@ -86,7 +86,7 @@ Validation is complete only when both criteria are satisfied:
 
 ## Phase 3: Suite Integration - Validation Scenarios
 
-### Scenario 3.1: Baseline Suite Resolves In Scenario Plans [STATUS: pending]
+### Scenario 3.1: Baseline Suite Resolves In Scenario Plans [STATUS: passed] [VALIDATED: cef7748]
 **Type**: Happy Path
 
 **Given**: The baseline suite is defined and attached to supported scenarios.
@@ -100,7 +100,7 @@ Validation is complete only when both criteria are satisfied:
 
 **Tools Required**: Bash, scenario runner.
 
-### Scenario 3.2: Unsupported Scenarios Do Not Receive Docker/Sandbox-Dependent Baseline Steps [STATUS: pending]
+### Scenario 3.2: Unsupported Scenarios Do Not Receive Docker/Sandbox-Dependent Baseline Steps [STATUS: passed] [VALIDATED: cef7748]
 **Type**: Sad Path
 
 **Given**: macOS optional-Docker and negative preflight scenarios exist.
@@ -114,7 +114,7 @@ Validation is complete only when both criteria are satisfied:
 
 **Tools Required**: Bash, scenario runner.
 
-### Scenario 3.3: Suite Runs Against Prepared Context Without Re-Onboarding [STATUS: pending]
+### Scenario 3.3: Suite Runs Against Prepared Context Without Re-Onboarding [STATUS: passed] [VALIDATED: cef7748]
 **Type**: Happy Path
 
 **Given**: A mocked/prepared context and mocked external commands.
@@ -130,7 +130,7 @@ Validation is complete only when both criteria are satisfied:
 
 ## Phase 4: Parity Map and Coverage Report Visibility - Validation Scenarios
 
-### Scenario 4.1: Coverage Report Shows Baseline Onboarding Parity [STATUS: pending]
+### Scenario 4.1: Coverage Report Shows Baseline Onboarding Parity [STATUS: passed] [VALIDATED: cef7748]
 **Type**: Happy Path
 
 **Given**: Baseline parity entries are present with `gap_domain: baseline-onboarding`.
@@ -144,7 +144,7 @@ Validation is complete only when both criteria are satisfied:
 
 **Tools Required**: Bash, coverage-report script.
 
-### Scenario 4.2: Deferred and Retired Entries Without Evidence Fail Review [STATUS: pending]
+### Scenario 4.2: Deferred and Retired Entries Without Evidence Fail Review [STATUS: passed] [VALIDATED: cef7748]
 **Type**: Sad Path
 
 **Given**: A deferred entry lacks owner/runner/secret metadata or a retired entry lacks reviewer/date evidence.
@@ -160,7 +160,7 @@ Validation is complete only when both criteria are satisfied:
 
 ## Phase 5: Integration Verification - Validation Scenarios
 
-### Scenario 5.1: Added Tests Pass Locally and in PR Checks [STATUS: pending]
+### Scenario 5.1: Added Tests Pass Locally and in PR Checks [STATUS: passed] [VALIDATED: cef7748]
 **Type**: Happy Path
 
 **Given**: Implementation changes and tests have been pushed to a PR.
@@ -174,7 +174,7 @@ Validation is complete only when both criteria are satisfied:
 
 **Tools Required**: Bash, Vitest, `npx tsx`, `gh`.
 
-### Scenario 5.2: PR Is Not Accepted When Added Tests Fail [STATUS: pending]
+### Scenario 5.2: PR Is Not Accepted When Added Tests Fail [STATUS: passed] [VALIDATED: cef7748]
 **Type**: Sad Path
 
 **Given**: The implementation PR exists but any added test fails.
@@ -190,7 +190,7 @@ Validation is complete only when both criteria are satisfied:
 
 ## Phase 6: Clean the House - Validation Scenarios
 
-### Scenario 6.1: Final Diff Is Scoped and Clean [STATUS: pending]
+### Scenario 6.1: Final Diff Is Scoped and Clean [STATUS: passed] [VALIDATED: cef7748]
 **Type**: Happy Path
 
 **Given**: Implementation and validation are complete.
@@ -204,7 +204,7 @@ Validation is complete only when both criteria are satisfied:
 
 **Tools Required**: Bash, project lint/format tools.
 
-### Scenario 6.2: Legacy Onboarding Coverage Re-Review Shows 100%+ Parity [STATUS: pending]
+### Scenario 6.2: Legacy Onboarding Coverage Re-Review Shows 100%+ Parity [STATUS: passed] [VALIDATED: cef7748]
 **Type**: Happy Path
 
 **Given**: The implementation PR is open and all added tests pass.
@@ -222,13 +222,13 @@ Validation is complete only when both criteria are satisfied:
 
 | Phase | Happy | Sad | Total | Passed | Failed | Pending |
 |-------|-------|-----|-------|--------|--------|---------|
-| Phase 1 | 1 | 1 | 2 | 0 | 0 | 2 |
-| Phase 2 | 1 | 1 | 2 | 0 | 0 | 2 |
-| Phase 3 | 2 | 1 | 3 | 0 | 0 | 3 |
-| Phase 4 | 1 | 1 | 2 | 0 | 0 | 2 |
-| Phase 5 | 1 | 1 | 2 | 0 | 0 | 2 |
-| Phase 6 | 2 | 0 | 2 | 0 | 0 | 2 |
-| **Total** | **8** | **5** | **13** | **0** | **0** | **13** |
+| Phase 1 | 1 | 1 | 2 | 2 | 0 | 0 |
+| Phase 2 | 1 | 1 | 2 | 2 | 0 | 0 |
+| Phase 3 | 2 | 1 | 3 | 3 | 0 | 0 |
+| Phase 4 | 1 | 1 | 2 | 2 | 0 | 0 |
+| Phase 5 | 1 | 1 | 2 | 2 | 0 | 0 |
+| Phase 6 | 2 | 0 | 2 | 2 | 0 | 0 |
+| **Total** | **8** | **5** | **13** | **13** | **0** | **0** |
 
 ## Approval Status
 
