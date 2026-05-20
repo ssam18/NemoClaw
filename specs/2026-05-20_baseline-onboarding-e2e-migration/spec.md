@@ -299,7 +299,7 @@ No new npm, Python, or system dependencies should be required.
 
 ## Implementation Phases
 
-## Phase 1: Legacy Assertion Inventory and Classification
+## Phase 1: Legacy Assertion Inventory and Classification [COMPLETED: c436ab9]
 
 ### Objective
 
@@ -327,7 +327,7 @@ Classify the scoped legacy assertions into mapped, deferred, or retired groups a
 - Every non-mapped assertion has a documented deferred or retired reason.
 - The classification distinguishes live E2E checks from schema-only metadata checks.
 
-## Phase 2: Baseline Onboarding Primitive Library
+## Phase 2: Baseline Onboarding Primitive Library [COMPLETED: c436ab9]
 
 ### Objective
 
@@ -351,7 +351,7 @@ Create the reusable helper layer that suite steps will call for baseline install
 - Helper tests cover success and failure paths for the core assertions.
 - Shellcheck-compatible style is preserved.
 
-## Phase 3: Suite Integration
+## Phase 3: Suite Integration [COMPLETED: c436ab9]
 
 ### Objective
 
@@ -374,7 +374,7 @@ Expose baseline helper assertions through scenario validation suites.
 - Suite scripts consume only `context.env` and scenario-provided state.
 - Docker-dependent steps are not attached to scenarios that cannot satisfy them.
 
-## Phase 4: Parity Map and Coverage Report Visibility
+## Phase 4: Parity Map and Coverage Report Visibility [COMPLETED: c436ab9]
 
 ### Objective
 
@@ -397,7 +397,7 @@ Make baseline onboarding visible as covered, deferred, or retired in parity and 
 - Deferred entries identify owner and runner/secret requirements.
 - Retired entries include reviewer/date evidence.
 
-## Phase 5: Integration Verification
+## Phase 5: Integration Verification [COMPLETED: c436ab9]
 
 ### Objective
 
@@ -419,7 +419,7 @@ Validate the migrated suite against framework behavior and, where possible, prep
 - Failures are reported as stable assertion IDs.
 - No product-code behavior changes are required.
 
-## Phase 6: Clean the House
+## Phase 6: Clean the House [COMPLETED: c436ab9]
 
 ### Objective
 
