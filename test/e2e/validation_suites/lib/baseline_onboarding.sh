@@ -3,7 +3,10 @@
 # SPDX-License-Identifier: Apache-2.0
 
 baseline_onboarding_pass() { printf 'PASS: %s %s\n' "$1" "${2:-}"; }
-baseline_onboarding_fail() { printf 'FAIL: %s %s\n' "$1" "${2:-}" >&2; return 1; }
+baseline_onboarding_fail() {
+  printf 'FAIL: %s %s\n' "$1" "${2:-}" >&2
+  return 1
+}
 
 baseline_onboarding_load_context() {
   local context_file="${E2E_CONTEXT_DIR:?E2E_CONTEXT_DIR is required}/context.env"
