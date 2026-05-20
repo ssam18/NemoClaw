@@ -340,7 +340,7 @@ Create the reusable helper layer that suite steps will call for baseline install
 3. Implement stable PASS/FAIL emission helpers.
 4. Implement CLI/OpenShell availability assertions.
 5. Implement sandbox list/status/log assertions.
-6. Implement route/provider/policy assertions where context provides enough information.
+6. Implement route/provider assertions where context provides enough information.
 7. Add helper-level tests using temporary `context.env` and mocked command binaries.
 
 ### Acceptance Criteria
